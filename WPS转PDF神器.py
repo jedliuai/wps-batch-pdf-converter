@@ -11,7 +11,7 @@ import tkinter as tk
 from tkinter import filedialog
 import win32com.client
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 def select_folder():
     """弹出窗口选择文件夹"""
@@ -23,7 +23,7 @@ def select_folder():
 def main():
     print("************************************************")
     print("         WPS Word 批量转 PDF 小工具")
-    print("      支持绿盾加密环境 | 自动扫描子文件夹")
+    print("  适用于 WPS 可正常打开文档的绿盾环境")
     print("************************************************\n")
 
     print("正在等待选择文件夹...")
@@ -66,7 +66,7 @@ def main():
         except:
             wps = win32com.client.Dispatch("Wps.Application")
             
-        wps.Visible = True  # 必须显示，否则绿盾会拦截
+        wps.Visible = True  # 保持可见，以兼容部分绿盾环境的文档访问策略
         wps.DisplayAlerts = False
     except Exception as e:
         print("\n❌ 启动 WPS 失败！请确认电脑上安装了 WPS Office。")
