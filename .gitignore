@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# PyInstaller outputs
+build/
+dist/
+
+# Local icon-generation working files (the distributable icon is tracked separately)
+logo.png
+make_icon.py
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
