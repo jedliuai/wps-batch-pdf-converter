@@ -5,9 +5,11 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Platform: Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](#运行条件与边界)
 
-一个面向 Windows + WPS Office 的本地批量 Word 转 PDF 工具。选择一个文件夹后，它会自动扫描全部子文件夹，将 `.doc`、`.docx`、`.wps` 文档导出为同目录 PDF；已有同名 PDF 会被跳过，不上传文件，也不覆盖现有结果。
+一个面向 Windows + WPS Office 的免费开源批量 Word 转 PDF 工具：保留 WPS 单文件导出 PDF **速度快、版式稳定**的优势，同时省去逐个打开、逐个导出的重复操作。选择一个文件夹后，它会自动扫描全部子文件夹，将 `.doc`、`.docx`、`.wps` 文档导出为同目录 PDF；已有同名 PDF 会被跳过，不上传文件，也不覆盖现有结果。
 
-特别适合归档资料、批量交付文件，以及需要让 WPS 保持可见才能正常导出的部分天锐绿盾（Tipray）办公环境。
+WPS 官方提供的单文件导出 PDF 可以免费使用，但原生“批量 PDF 导出”属于会员功能（不同版本和地区的权益可能变化，以 WPS 当前说明为准）。本工具不破解 WPS、不修改会员状态，而是逐个调用本机 WPS 的正常导出能力，为需要批量处理的人提供一个透明、可审阅的开源自动化方案。[查看 WPS 官方说明](https://www.wps.com/academy/how-to-convert-word-excel-ppt-to-pdf-for-free-in-wps-office-quick-tutorials-1863083/)
+
+特别适合不想为一次批量任务开通会员、又看重 WPS 转换速度和版式效果的用户，以及需要让 WPS 保持可见才能正常导出的部分天锐绿盾（Tipray）办公环境。
 
 > [下载最新版 Windows EXE](https://github.com/jedliuai/wps-batch-pdf-converter/releases/latest) · [查看源码运行方式](#从源码运行) · [反馈问题](https://github.com/jedliuai/wps-batch-pdf-converter/issues)
 
@@ -21,7 +23,7 @@
 
 ## 它解决什么问题
 
-手工逐个打开文档、另存为 PDF，在文件多、目录深或文档分散时非常耗时。这个工具把重复操作交给本机 WPS：
+WPS 转单个 PDF 很快，但文件多、目录深或文档分散时，手工逐个打开和导出仍然耗时；直接使用 WPS 的批量导出又可能需要会员。这个工具把重复操作交给本机 WPS，一次解决“想用 WPS 的转换速度”和“想免费批量处理”两个痛点：
 
 ```text
 选择根文件夹
@@ -58,6 +60,10 @@
 - 对天锐绿盾环境的兼容方式是让 WPS 保持可见并走正常打开、导出流程。它**不会解密文档、绕过权限或规避企业安全策略**；没有读取权限的文件仍无法转换。
 - 同目录已有同名 PDF 时会直接跳过。如需重新生成，请先自行备份或移走旧 PDF。
 - 当前采用控制台显示进度；大量或复杂文档的速度取决于 WPS 和电脑性能。
+
+### 这是在绕过 WPS 会员吗？
+
+不是。本工具不会解锁或调用 WPS 的会员批量转换入口，也不会修改 WPS、账号或授权状态。它只对每个有权正常打开的文档，依次调用 WPS 桌面版自身的单文件 PDF 导出能力。请遵守 WPS 的许可条款和所在组织的安全政策。
 
 ## 从源码运行
 
