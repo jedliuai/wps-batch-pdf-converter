@@ -1,3 +1,5 @@
+> **Chatgpt代充：[aishopvip.com](https://aishopvip.com)**
+
 <div align="center">
 
 <img src="assets/readme-hero.png" alt="绿盾透明加密环境下，由获授权的 WPS 批量将 Word 和 WPS 文档快速导出为 PDF" width="100%">
